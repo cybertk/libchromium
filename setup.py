@@ -2,13 +2,16 @@
 
 import os
 import shutil
+import subprocess
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 chromium_dir = os.path.abspath(os.path.join(script_dir, os.pardir, 'chromium'))
 
 overrides_dir = os.path.abspath(os.path.join(script_dir, 'overrides'))
+patches_dir = os.path.abspath(os.path.join(script_dir, 'patches'))
 
 def Override(path):
+  """Override chromium's original file with the file located at path."""
   dst_path = os.path.join(chromium_dir, os.path.relpath(path, overrides_dir))
   dst_path = os.path.abspath(dst_path)
 
@@ -21,6 +24,19 @@ def Override(path):
 
   else:
     shutil.copy(path, dst_path)
-    print 'Override', dst_path
+    print 'override', dst_path
+
+def Patch(path):
+  """Apply a patch aginst chromimu's origin source tree."""
+  if os.path.isdir(path):
+    for item in os.listdir(path):
+      # Recursive override
+      Patch(os.path.join(path, item))
+
+  else:
+    # Relative patch path.
+    relpath = os.path.relpath(path, chromium_dir)
+    subprocess.call(['patch', '-f', '-d', chromium_dir, '-p0', '-i', relpath])
 
 Override(overrides_dir)
+Patch(patches_dir)
