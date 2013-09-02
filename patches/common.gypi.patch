@@ -1,0 +1,20 @@
+--- src/build/common.gypi	(revision 218165)
++++ src/build/common.gypi	(working copy)
+@@ -4206,7 +4206,7 @@
+               ['target_arch=="armv7" and "<(GENERATOR)"!="xcode"', {
+                 'xcode_settings': { 'ARCHS': [ 'armv7' ]},
+               }, {
+-                'xcode_settings': { 'ARCHS': [ 'i386' ] },
++                'xcode_settings': { 'ARCHS': '$(ARCHS_STANDARD_32_BIT)' },
+               }],
+             ],
+           }],
+@@ -4686,7 +4686,7 @@
+       }],
+       ['OS=="ios"', {
+         # Just build armv7, until armv7s is correctly tested.
+-        'VALID_ARCHS': 'armv7 i386',
++        'VALID_ARCHS': 'armv7',
+         # Target both iPhone and iPad.
+         'TARGETED_DEVICE_FAMILY': '1,2',
+       }],
