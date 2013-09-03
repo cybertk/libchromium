@@ -13,6 +13,7 @@ patches_dir = os.path.abspath(os.path.join(script_dir, 'patches'))
 def Override(path):
   """Override chromium's original file with the file located at path."""
   dst_path = os.path.join(chromium_dir, os.path.relpath(path, overrides_dir))
+  # Remove . and ..
   dst_path = os.path.abspath(dst_path)
 
   if os.path.isdir(path):
@@ -24,7 +25,7 @@ def Override(path):
 
   else:
     shutil.copy(path, dst_path)
-    print 'override', dst_path
+    print 'override', os.path.relpath(dst_path, chromium_dir)
 
 def Patch(path):
   """Apply a patch aginst chromimu's origin source tree."""
