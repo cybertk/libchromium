@@ -12,6 +12,7 @@ vars = {
   "chromium_revision": "218165",
 
   "gtm_revision": "625",
+  "skia_revision": "10765",
 }
 
 deps = {
@@ -44,8 +45,21 @@ deps = {
   "chromium/src/third_party/nss":
      Var("chromium_svn") + "/deps/third_party/nss@219032",
 
+  # sdcn dependency, used in src/net.
   "chromium/src/sdch/open-vcdiff":
     (Var("googlecode_url") % "open-vcdiff") + "/trunk@42",
+
+  # Skia, media dependency.
+  "chromium/src/third_party/skia/src":
+    (Var("googlecode_url") % "skia") + "/trunk/src@" + Var("skia_revision"),
+  "chromium/src/third_party/skia/gyp":
+    (Var("googlecode_url") % "skia") + "/trunk/gyp@" + Var("skia_revision"),
+  "chromium/src/third_party/skia/include":
+    (Var("googlecode_url") % "skia") + "/trunk/include@" + Var("skia_revision"),
+
+  # opus audio codec, media dependency.
+  "chromium/src/third_party/opus/src":
+     Var("chromium_svn") + "/deps/third_party/opus@185324",
 
   # We no not use iossim
   "chromium/src/testing/iossim":
