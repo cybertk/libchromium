@@ -40,6 +40,13 @@ deps = {
   "chromium/src/tools/gyp":
     (Var("googlecode_url") % "gyp") + "/trunk@1707",
 
+  # NSS, for SSLClientSocketNSS in chromium/net.
+  "chromium/src/third_party/nss":
+     Var("chromium_svn") + "/deps/third_party/nss@219032",
+
+  "chromium/src/sdch/open-vcdiff":
+    (Var("googlecode_url") % "open-vcdiff") + "/trunk@42",
+
   # We no not use iossim
   "chromium/src/testing/iossim":
     None,
