@@ -1,6 +1,8 @@
 # When adding a new dependency, please update the top-level .gitignore file
 # # to list the dependency's destination directory.
 
+use_relative_paths = True
+
 vars = {
   "github": "http://github.com/%s/%s.git",
   "googlecode_url": "http://%s.googlecode.com/svn",
@@ -58,7 +60,7 @@ deps_os = {
       None,
       'src/third_party/libjpeg_turbo':
       None,
-      "libchromium/src/third_party/nss":
+      "src/third_party/nss":
       From("chromium_deps", "src/third_party/nss"),
       'src/third_party/bidichecker':
       None,
@@ -110,53 +112,50 @@ deps_os = {
 }
 
 deps = {
-  "chromium_deps":
+  "../chromium_deps":
      File("http://src.chromium.org/svn/releases/30.0.1550.2/DEPS"),
 
-  "libchromium/src/chrome": None,
-  "libchromium/src/chromeos": None,
-  "libchromium/src/content": None,
-  "libchromium/src/browser": None,
-  "libchromium/src/android_webview": None,
-  "libchromium/src/webkit": None,
+  "src/chrome": None,
+  "src/content": None,
+  "src/browser": None,
 
   # We no not use iossim
-  "libchromium/src/testing/iossim":
+  "src/testing/iossim":
     None,
 
   # Main source tree.
-  "libchromium/src": From("chromium_deps", "src"),
+  #"src": From("chromium_deps", "src"),
 
   # depot_tools, include gyp, ninja etc.
-  "libchromium/depot_tools": From("chromium_deps", "depot_tools"),
+  "depot_tools": From("chromium_deps", "depot_tools"),
 
   # Base depends on it?
-  "libchromium/src/third_party/icu": From("chromium_deps", "src/third_party/icu"),
+  "src/third_party/icu": From("chromium_deps", "src/third_party/icu"),
 
   # src/testing dependencies.
-  "libchromium/src/testing/gtest": From("chromium_deps", "src/testing/gtest"),
-  "libchromium/src/testing/gmock": From("chromium_deps", "src/testing/gmock"),
+  "src/testing/gtest": From("chromium_deps", "src/testing/gtest"),
+  "src/testing/gmock": From("chromium_deps", "src/testing/gmock"),
 
   # Resource genereator, used by i18n.
-  "libchromium/src/tools/grit": From("chromium_deps", "src/tools/grit"),
+  "src/tools/grit": From("chromium_deps", "src/tools/grit"),
 
   # src/build dependencies. gyp_chromium.
-  "libchromium/src/tools/gyp": From("chromium_deps", "src/tools/gyp"),
+  "src/tools/gyp": From("chromium_deps", "src/tools/gyp"),
 
   # NSS, for SSLClientSocketNSS in net.
-  "libchromium/src/third_party/nss": From("chromium_deps", "src/third_party/nss"),
+  "src/third_party/nss": From("chromium_deps", "src/third_party/nss"),
 
   # sdcn dependency, used in src/net.
-  "libchromium/src/sdch/open-vcdiff": From("chromium_deps", "src/sdch/open-vcdiff"),
+  "src/sdch/open-vcdiff": From("chromium_deps", "src/sdch/open-vcdiff"),
 
   # Skia, media dependency.
-  "libchromium/src/third_party/skia/src": From("chromium_deps", "src/third_party/skia/src"),
-  "libchromium/src/third_party/skia/gyp": From("chromium_deps", "src/third_party/skia/gyp"),
-  "libchromium/src/third_party/skia/include":
+  "src/third_party/skia/src": From("chromium_deps", "src/third_party/skia/src"),
+  "src/third_party/skia/gyp": From("chromium_deps", "src/third_party/skia/gyp"),
+  "src/third_party/skia/include":
      From("chromium_deps", "src/third_party/skia/include"),
 
   # opus audio codec, media dependency.
-  "libchromium/src/third_party/opus/src": From("chromium_deps", "src/third_party/opus/src"),
+  "src/third_party/opus/src": From("chromium_deps", "src/third_party/opus/src"),
 }
 
 hooks = [
