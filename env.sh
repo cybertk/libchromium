@@ -1,12 +1,23 @@
 #!/bin/sh
 
-GYP_DEFINES="OS=ios"
+# Get script dir.
+SCRIPT_DIR=`pwd -P`/libchromium
+
+if [ ! -d $SCRIPT_DIR ];
+then
+    echo 'Error: Invoke ". libchromium/env.sh" in top dir.'
+    return
+fi
+
+GYP_DEFINES=
 GYP_GENERATORS=
+
+GYP_DEFINES+=" OS=ios"
 
 export GYP_DEFINES
 export GYP_GENERATORS
 
-CHROMIUM_PATH=`pwd`/chromium/tools/depot_tools
+CHROMIUM_PATH=$SCRIPT_DIR/depot_tools
 
 # Clear the path first
 PATH=${PATH/$CHROMIUM_PATH:/}
