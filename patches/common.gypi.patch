@@ -2,15 +2,15 @@ Index: build/common.gypi
 ===================================================================
 --- build/common.gypi	(revision 220972)
 +++ build/common.gypi	(working copy)
-@@ -4214,7 +4214,7 @@
-             },
-             'conditions': [
+@@ -4216,7 +4216,7 @@
                ['target_arch=="armv7" and "<(GENERATOR)"!="xcode"', {
--                'xcode_settings': { 'ARCHS': [ 'armv7' ]},
-+                'xcode_settings': { 'ARCHS': '$(ARCHS_STANDARD_32_BIT)'},
+                 'xcode_settings': { 'ARCHS': [ 'armv7' ]},
                }, {
-                 'xcode_settings': { 'ARCHS': [ 'i386' ] },
+-                'xcode_settings': { 'ARCHS': [ 'i386' ] },
++                'xcode_settings': { 'ARCHS': '$(ARCHS_STANDARD_32_BIT)' },
                }],
+             ],
+           }],
 @@ -4696,7 +4696,7 @@
        }],
        ['OS=="ios"', {
