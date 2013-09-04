@@ -1,15 +1,17 @@
---- src/build/common.gypi	(revision 218165)
-+++ src/build/common.gypi	(working copy)
-@@ -4206,7 +4206,7 @@
+Index: build/common.gypi
+===================================================================
+--- build/common.gypi	(revision 220972)
++++ build/common.gypi	(working copy)
+@@ -4214,7 +4214,7 @@
+             },
+             'conditions': [
                ['target_arch=="armv7" and "<(GENERATOR)"!="xcode"', {
-                 'xcode_settings': { 'ARCHS': [ 'armv7' ]},
+-                'xcode_settings': { 'ARCHS': [ 'armv7' ]},
++                'xcode_settings': { 'ARCHS': '$(ARCHS_STANDARD_32_BIT)'},
                }, {
--                'xcode_settings': { 'ARCHS': [ 'i386' ] },
-+                'xcode_settings': { 'ARCHS': '$(ARCHS_STANDARD_32_BIT)' },
+                 'xcode_settings': { 'ARCHS': [ 'i386' ] },
                }],
-             ],
-           }],
-@@ -4686,7 +4686,7 @@
+@@ -4696,7 +4696,7 @@
        }],
        ['OS=="ios"', {
          # Just build armv7, until armv7s is correctly tested.
