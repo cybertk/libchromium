@@ -5,7 +5,9 @@ import shutil
 import subprocess
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
-chromium_dir = os.path.abspath(os.path.join(script_dir, os.pardir, 'chromium'))
+chromium_dir = os.path.abspath(os.path.join(script_dir, 'src'))
+# Solution root directory.
+root_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
 
 overrides_dir = os.path.abspath(os.path.join(script_dir, 'overrides'))
 patches_dir = os.path.abspath(os.path.join(script_dir, 'patches'))
@@ -41,7 +43,7 @@ def Patch(path):
 
 def CreateSym():
   """Create chromium shortcut. Chromium's source tree must live in src dir."""
-  shortpath = os.path.join(chromium_dir, 'chrome')
+  shortpath = os.path.join(root_dir, 'chrome')
   if not os.path.exists(shortpath):
     os.symlink(chromium_dir, shortpath)
   
