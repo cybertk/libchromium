@@ -23,12 +23,12 @@ Create .gclient with following content, replace the "demo" solution to your real
 
 Checkout codes.
 
-  $ gclient sync --nohooks
+    $ gclient sync --nohooks
 
 Configure environment
 
-  $ . libchromium/env.sh
+    $ . libchromium/env.sh
 
 Generate projects
 
-  $ gclient runhooks
+    $ gclient runhooks
