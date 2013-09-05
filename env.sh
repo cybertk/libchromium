@@ -19,6 +19,9 @@ export GYP_GENERATORS
 
 CHROMIUM_PATH=$SCRIPT_DIR/depot_tools
 
+# Enable gyp syntax check.
+export CHROMIUM_GYP_SYNTAX_CHECK=1
+
 # Clear the path first
 PATH=${PATH/$CHROMIUM_PATH:/}
 
