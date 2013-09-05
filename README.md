@@ -1,7 +1,7 @@
 libchromium
 ===========
 
-#### Create .gclient with following content.
+Create .gclient with following content, replace the "demo" solution to your real project.
 
     solutions = [
     { "name"        : "demo",
@@ -22,10 +22,13 @@ libchromium
     target_os_only = True
 
 Checkout codes.
+
   $ gclient sync --nohooks
 
 Configure environment
+
   $ . libchromium/env.sh
 
 Generate projects
+
   $ gclient runhooks
