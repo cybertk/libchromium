@@ -26,6 +26,15 @@ base_libs = [
 
 net_libs = [
   'net',
+
+  # Dependencies
+  'nss_static',
+  'sdch',
+  'url_lib',
+  'chrome_zlib',  # chromium libzlib
+  'crcrypto',  # chromium libcrypto
+  'crnspr',  # chromium libnspr
+  'crnss',  # chromium libnss, IOS
 ]
 
 libs = {

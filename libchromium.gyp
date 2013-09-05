@@ -5,6 +5,7 @@
 
   'includes': [
     'base.gypi',
+    'net.gypi',
   ],
   'targets': [
   ]
