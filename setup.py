@@ -39,7 +39,8 @@ def Patch(path):
   else:
     # Relative patch path.
     relpath = os.path.relpath(path, chromium_dir)
-    subprocess.call(['patch', '-f', '-d', chromium_dir, '-p0', '-i', relpath])
+    subprocess.call(
+        ['patch', '-N', '-s', '-d', chromium_dir, '-p0', '-i', relpath])
 
 def CreateSym():
   """Create chromium shortcut. Chromium's source tree must live in src dir."""
