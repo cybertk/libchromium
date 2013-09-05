@@ -9,7 +9,8 @@ chromium_dir = os.path.abspath(os.path.join(script_dir, 'src'))
 # Solution root directory.
 root_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
 
+gyp_chromium_path = os.path.join(chromium_dir, 'build', 'gyp_chromium')
+
 # Run chromium's gyp_chromium with --depth.
 subprocess.call(
-    ['python', 'src/build/gyp_chromium', '--depth', chromium_dir]
-    + sys.argv[1:])
+    ['python', gyp_chromium_path, '--depth', chromium_dir] + sys.argv[1:])
