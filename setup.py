@@ -43,7 +43,7 @@ def Patch(path):
 
 def CreateSym():
   """Create chromium shortcut. Chromium's source tree must live in src dir."""
-  shortpath = os.path.join(root_dir, 'chrome')
+  shortpath = os.path.join(root_dir, 'chromium')
   if not os.path.exists(shortpath):
     os.symlink(chromium_dir, shortpath)
   
