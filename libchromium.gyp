@@ -7,6 +7,7 @@
     'base.gypi',
     'net.gypi',
     'media.gypi',
+    'ui.gypi',
   ],
   'targets': [
   ]
