@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import os
+import subprocess
+import sys
+
+script_dir = os.path.dirname(os.path.realpath(__file__))
+chromium_dir = os.path.abspath(os.path.join(script_dir, 'src'))
+# Solution root directory.
+root_dir = os.path.abspath(os.path.join(script_dir, os.pardir))
+
+# Run chromium's gyp_chromium with --depth.
+subprocess.call(
+    ['python', 'src/build/gyp_chromium', '--depth', chromium_dir]
+    + sys.argv[1:])
