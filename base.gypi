@@ -8,6 +8,12 @@
       'conditions': [
         ['use_prebuilt_base == 1', {
           'type': 'none',
+          # base headers include each other.
+          'direct_dependent_settings': {
+            'include_dirs': [
+              'src',
+            ],
+          },  # direct_dependent_settings
           'link_settings': {
             'libraries': [
               'prebuilt/ios/armv7/base/liballocator_extension_thunks.a',
