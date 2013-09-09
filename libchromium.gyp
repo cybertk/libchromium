@@ -9,6 +9,7 @@
     'media.gypi',
     'ui.gypi',
     'sql.gypi',
+    'jingle.gypi',
   ],
   'targets': [
   ]
