@@ -40,5 +40,33 @@
         }]  # end, use_prebuilt_base == 1
       ],
     },  # target base.
+
+    {
+      'target_name': 'base_prefs',
+      'conditions': [
+        ['use_prebuilt_base == 1', {
+          'type': 'none',
+          # base headers include each other.
+          'direct_dependent_settings': {
+            'include_dirs': [
+              'src',
+            ],
+          },  # direct_dependent_settings
+          'link_settings': {
+            'libraries': [
+              'prebuilt/ios/armv7/base/libbase_prefs.a',
+            ],
+          },  # link_settings
+        }, {  # else, use_prebuilt_base == 1
+          'type': '<(component)',
+          'dependencies': [
+            'src/base/base.gyp:base_prefs',
+          ],
+          'export_dependent_settings': [
+            'src/base/base.gyp:base_prefs',
+          ],
+        }]  # end, use_prebuilt_base == 1
+      ],
+    },  # target base_prefs
   ]
 }
