@@ -1,3 +1,6 @@
 depot_tools/
 src/
 prebuilt/
+
+# symlink for src/
+include/chromium
