@@ -15,7 +15,6 @@
     'base.gypi',
     'net.gypi',
     'media.gypi',
-    'ui.gypi',
     'sql.gypi',
     'jingle.gypi',
   ],

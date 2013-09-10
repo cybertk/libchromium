@@ -17,7 +17,7 @@ deps_os = {
 
 deps = {
   "../chromium_deps":
-     File("http://src.chromium.org/svn/releases/31.0.1620.2/DEPS"),
+     File("http://src.chromium.org/svn/releases/28.0.1500.16/DEPS"),
 
   "src/chrome": None,
   "src/content": None,
@@ -32,6 +32,9 @@ deps = {
 
   # depot_tools, include gyp, ninja etc.
   "depot_tools": From("chromium_deps", "depot_tools"),
+
+  "src/third_party/jsoncpp/source/src/lib_json":
+    From("chromium_deps", "src/third_party/jsoncpp/source/src/lib_json"),
 
   # Base depends on it?
   "src/third_party/icu": From("chromium_deps", "src/third_party/icu"),
@@ -49,6 +52,9 @@ deps = {
   # sdcn dependency, used in src/net.
   "src/sdch/open-vcdiff": From("chromium_deps", "src/sdch/open-vcdiff"),
 
+  # net dependency, used in src/net.
+  "src/googleurl": From("chromium_deps", "src/googleurl"),
+
   # Skia, media dependency.
   "src/third_party/skia/src": From("chromium_deps", "src/third_party/skia/src"),
   "src/third_party/skia/gyp": From("chromium_deps", "src/third_party/skia/gyp"),
@@ -57,6 +63,9 @@ deps = {
 
   # opus audio codec, media dependency.
   "src/third_party/opus/src": From("chromium_deps", "src/third_party/opus/src"),
+
+  "src/third_party/libjingle/source":
+    From("chromium_deps", "src/third_party/libjingle/source"),
 }
 
 hooks = [
