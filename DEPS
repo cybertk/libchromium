@@ -33,8 +33,10 @@ deps = {
   # depot_tools, include gyp, ninja etc.
   "depot_tools": From("chromium_deps", "depot_tools"),
 
+  "src/third_party/jsoncpp/source/include":
+    "http://svn.code.sf.net/p/jsoncpp/code/trunk/jsoncpp/include@248",
   "src/third_party/jsoncpp/source/src/lib_json":
-    From("chromium_deps", "src/third_party/jsoncpp/source/src/lib_json"),
+    "http://svn.code.sf.net/p/jsoncpp/code/trunk/jsoncpp/src/lib_json@248",
 
   # Base depends on it?
   "src/third_party/icu": From("chromium_deps", "src/third_party/icu"),
