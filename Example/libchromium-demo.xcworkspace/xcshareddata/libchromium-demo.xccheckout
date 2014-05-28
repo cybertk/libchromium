@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1BA37242-D577-4C45-B155-FF42F3493C8D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>libchromium-demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E2CC15B-6A0C-4753-BF81-94C7272C3266</key>
+		<string>http://github.com/cybertk/libchromium.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/libchromium-demo.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E2CC15B-6A0C-4753-BF81-94C7272C3266</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://github.com/cybertk/libchromium.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E2CC15B-6A0C-4753-BF81-94C7272C3266</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E2CC15B-6A0C-4753-BF81-94C7272C3266</string>
+			<key>IDESourceControlWCCName</key>
+			<string>libchromium</string>
+		</dict>
+	</array>
+</dict>
+</plist>

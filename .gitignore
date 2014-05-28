@@ -1,6 +1,17 @@
-depot_tools/
-src/
-prebuilt/
+# Created by `rake sync`
+/.gclient_entries
+/build/
+/depot_tools/
+/src/
+/chromium_deps/
 
-# symlink for src/
-include/chromium
+# Created by `rake gyp`
+/dummy/dummy.xcodeproj/
+
+# Created by `rake archvive`
+libchromium-*.zip
+
+# Created by `pod install`
+/Example/Pods/
+
+xcuserdata/

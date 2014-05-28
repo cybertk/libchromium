@@ -1,0 +1,12 @@
+PODS:
+  - libchromium (0.1.0):
+    - libchromium/Base
+  - libchromium/Base (0.1.0)
+
+DEPENDENCIES:
+  - libchromium
+
+SPEC CHECKSUMS:
+  libchromium: 1934e0a18d21d7f17613e7acd0998e6cc199db39
+
+COCOAPODS: 0.32.1
