@@ -74,6 +74,6 @@ hooks = [
   {
     # configure overrides.
     "pattern": "libchromium/",
-    "action": ["python", "libchromium/setup.py"],
+    "action": ["python", "libchromium/setup.py", "--chromium_dir", "libchromium/src", "--overrides_dir", "overrides"],
   },
 ]

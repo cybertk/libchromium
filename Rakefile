@@ -2,7 +2,8 @@ require './archive'
 
 desc "Sync chromium source [EMPTY]"
 task :sync do
-  sh 'gclient sync --nohooks'
+  sh 'gclient revert --nohooks'
+  sh 'python setup.py --chromium_dir src --overrides_dir overrides'
 end
 
 desc "Generate project [EMPTY]"
