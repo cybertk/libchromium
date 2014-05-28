@@ -2351,7 +2351,7 @@
         ],
       }],
     ],  # target_conditions for 'target_defaults'
-    'default_configuration': 'Debug',
+    'default_configuration': 'Release',
     'configurations': {
       # VCLinkerTool LinkIncremental values below:
       #   0 == default
