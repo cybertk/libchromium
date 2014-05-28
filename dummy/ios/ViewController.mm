@@ -10,7 +10,7 @@
 
 #include "chromium/base/bind.h"
 #include "chromium/base/memory/scoped_ptr.h"
-#include "chromium/base/message_loop/message_loop.h"
+#include "chromium/base/message_loop.h"
 
 void DoSomething() {
   DVLOG(0) << "Print in callback";
