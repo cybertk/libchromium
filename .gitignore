@@ -4,9 +4,11 @@
 /depot_tools/
 /src/
 /chromium_deps/
+/include/chromium
 
 # Created by `rake gyp`
 /dummy/dummy.xcodeproj/
+/libchromium.xcodeproj/
 
 # Created by `rake archvive`
 libchromium-*.zip
