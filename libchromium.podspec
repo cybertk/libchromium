@@ -54,4 +54,16 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
     ss.libraries =
       'sql'
   end
+
+  s.subspec 'jingle' do |ss|
+    ss.dependency 'libchromium/base'
+    ss.dependency 'libchromium/net'
+    ss.libraries =
+      'expat',
+      'jingle',
+      'jingle_glue',
+      'jingle_p2p_constants',
+      'jsoncpp',
+      'notifier'
+  end
 end

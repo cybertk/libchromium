@@ -4,7 +4,7 @@
   },
   'targets': [
     {
-      'target_name': 'notifier',
+      'target_name': 'jingle',
       'conditions': [
         ['use_prebuilt_jingle == 1', {
           'type': 'none',

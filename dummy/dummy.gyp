@@ -20,8 +20,8 @@
         '../libchromium.gyp:base',
         '../libchromium.gyp:net',
         '../libchromium.gyp:sql',
+        '../libchromium.gyp:jingle',
         # '../libchromium.gyp:media',
-        # '../libchromium.gyp:jingle',
        ],
       'include_dirs': [
         '..',

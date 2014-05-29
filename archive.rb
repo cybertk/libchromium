@@ -37,7 +37,16 @@ $libs = {
 
   'sql' => [
     'sql',
-  ]
+  ],
+
+  'jingle' => [
+    'expat',
+    'jingle',
+    'jingle_glue',
+    'jingle_p2p_constants',
+    'jsoncpp',
+    'notifier'
+  ],
 }
 
 def archive(version)
