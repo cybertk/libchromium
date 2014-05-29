@@ -19,6 +19,7 @@ $libs = {
     'modp_b64',
     'allocator_extension_thunks',
   ],
+
   'net' => [
     'net',
 
@@ -32,6 +33,10 @@ $libs = {
     'crnssckbi',
     'crnspr',  # chromium libnspr
     'crssl',  # chromium libssl
+  ],
+
+  'sql' => [
+    'sql',
   ]
 }
 

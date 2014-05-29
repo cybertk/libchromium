@@ -17,7 +17,7 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
     'GCC_PREPROCESSOR_DEFINITIONS' => 'DISABLE_NACL CHROMIUM_BUILD USE_LIBJPEG_TURBO=1 ENABLE_INPUT_SPEECH ENABLE_EGLIMAGE=1 DISABLE_FTP_SUPPORT=1 NDEBUG NVALGRIND DYNAMIC_ANNOTATIONS_ENABLED=0'
   }
 
-  s.subspec 'Base' do |ss|
+  s.subspec 'base' do |ss|
     ss.libraries =
       'base',
       'base_i18n',
@@ -32,7 +32,7 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
       'allocator_extension_thunks'
   end
 
-  s.subspec 'Net' do |ss|
+  s.subspec 'net' do |ss|
     ss.dependency 'libchromium/base'
     ss.libraries =
       'net',
@@ -46,6 +46,12 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
       'crnss',  # chromium libnss, IOS
       'crnssckbi',
       'crnspr',  # chromium libnspr
-      'crssl',  # chromium libssl
+      'crssl'  # chromium libssl
+  end
+
+  s.subspec 'sql' do |ss|
+    ss.dependency 'libchromium/base'
+    ss.libraries =
+      'sql'
   end
 end
