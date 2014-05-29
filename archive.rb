@@ -47,6 +47,17 @@ $libs = {
     'jsoncpp',
     'notifier'
   ],
+
+  'media' => [
+    'media',
+
+    # Depedencies
+    'png',
+    'ui',
+    'skia',
+    'skia_opts_ios',
+    'opus'
+  ]
 }
 
 def archive(version)

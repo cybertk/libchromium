@@ -66,4 +66,17 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
       'jsoncpp',
       'notifier'
   end
+
+  s.subspec 'media' do |ss|
+    ss.dependency 'libchromium/base'
+    ss.libraries =
+      'media',
+
+      # Depedencies
+      'png',
+      'ui',
+      'skia',
+      'skia_opts_ios',
+      'opus'
+  end
 end

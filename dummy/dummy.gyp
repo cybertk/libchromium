@@ -21,7 +21,7 @@
         '../libchromium.gyp:net',
         '../libchromium.gyp:sql',
         '../libchromium.gyp:jingle',
-        # '../libchromium.gyp:media',
+        '../libchromium.gyp:media',
        ],
       'include_dirs': [
         '..',
