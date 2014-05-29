@@ -18,8 +18,8 @@
       ],
       'dependencies': [
         '../libchromium.gyp:base',
+        '../libchromium.gyp:net',
         # '../libchromium.gyp:media',
-        # '../libchromium.gyp:net',
         # '../libchromium.gyp:sql',
         # '../libchromium.gyp:jingle',
        ],

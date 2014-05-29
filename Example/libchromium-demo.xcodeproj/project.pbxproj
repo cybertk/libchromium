@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F231EAA5D924E2F89892DE2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14796DFEE57644DC99AA4F47 /* libPods.a */; };
+		CB04E51619379CE8002386C0 /* rest_request_context_getter.cc in Sources */ = {isa = PBXBuildFile; fileRef = CB04E51419379CE8002386C0 /* rest_request_context_getter.cc */; };
 		CB6BCB4C1928B07C00850014 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6BCB4B1928B07C00850014 /* Foundation.framework */; };
 		CB6BCB4E1928B07C00850014 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6BCB4D1928B07C00850014 /* CoreGraphics.framework */; };
 		CB6BCB501928B07C00850014 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6BCB4F1928B07C00850014 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		00B8019E2EFD4398ADB10432 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		14796DFEE57644DC99AA4F47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB04E51419379CE8002386C0 /* rest_request_context_getter.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rest_request_context_getter.cc; sourceTree = "<group>"; };
+		CB04E51519379CE8002386C0 /* rest_request_context_getter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rest_request_context_getter.h; sourceTree = "<group>"; };
 		CB6BCB481928B07C00850014 /* libchromium-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "libchromium-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB6BCB4B1928B07C00850014 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB6BCB4D1928B07C00850014 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +126,8 @@
 		CB6BCB511928B07C00850014 /* libchromium-demo */ = {
 			isa = PBXGroup;
 			children = (
+				CB04E51419379CE8002386C0 /* rest_request_context_getter.cc */,
+				CB04E51519379CE8002386C0 /* rest_request_context_getter.h */,
 				CB6BCB5A1928B07C00850014 /* CKAppDelegate.h */,
 				CB6BCB5B1928B07C00850014 /* CKAppDelegate.m */,
 				CB6BCB5D1928B07C00850014 /* Main_iPhone.storyboard */,
@@ -306,6 +311,7 @@
 				CB6BCB681928B07C00850014 /* CKSecondViewController.m in Sources */,
 				CB6BCB5C1928B07C00850014 /* CKAppDelegate.m in Sources */,
 				CB6BCB581928B07C00850014 /* main.mm in Sources */,
+				CB04E51619379CE8002386C0 /* rest_request_context_getter.cc in Sources */,
 				CB6BCB651928B07C00850014 /* CKFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,11 +18,6 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
   }
 
   s.subspec 'Base' do |ss|
-    # ss.header_dir       = 'chromium/base'
-    # ss.preserve_paths = 'src/base'
-    # ss.source_files = 'src/base/**/*.h'
-    # ss.public_header_files = 'src/base/**/*.h'
-    # ss.header_mappings_dir = 'base'
     ss.libraries =
       'base',
       'base_i18n',
@@ -35,6 +30,22 @@ ${PODS_ROOT}/#{s.name}/include/chromium \
       'icuuc',
       'modp_b64',
       'allocator_extension_thunks'
+  end
 
+  s.subspec 'Net' do |ss|
+    ss.dependency 'libchromium/base'
+    ss.libraries =
+      'net',
+
+      # Dependencies
+      'nss_static',
+      'sdch',
+      'googleurl',
+      'chrome_zlib',  # chromium libzlib
+      'crcrypto',  # chromium libcrypto
+      'crnss',  # chromium libnss, IOS
+      'crnssckbi',
+      'crnspr',  # chromium libnspr
+      'crssl',  # chromium libssl
   end
 end

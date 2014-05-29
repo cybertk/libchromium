@@ -18,6 +18,20 @@ $libs = {
     'icuuc',
     'modp_b64',
     'allocator_extension_thunks',
+  ],
+  'net' => [
+    'net',
+
+    # Dependencies
+    'nss_static',
+    'sdch',
+    'googleurl',
+    'chrome_zlib',  # chromium libzlib
+    'crcrypto',  # chromium libcrypto
+    'crnss',  # chromium libnss, IOS
+    'crnssckbi',
+    'crnspr',  # chromium libnspr
+    'crssl',  # chromium libssl
   ]
 }
 
@@ -28,11 +42,16 @@ def archive(version)
   lib_dir = script_dir + 'src/xcodebuild/Release-iphoneOS'
   src_dir = script_dir + 'src'
 
+  # Delete if exist
+  File.delete(zipfile_name) if File.exist?(zipfile_name)
+
   Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
     # Archive libs
-    $libs['base'].each do |lib|
-      filename = 'lib%s.a' % lib
-      zipfile.add('lib/' + filename, lib_dir + filename)
+    $libs.each do |k, mod|
+      mod.each do |lib|
+        filename = 'lib%s.a' % lib
+        zipfile.add('lib/' + filename, lib_dir + filename)
+      end
     end
 
     # Archive headers
